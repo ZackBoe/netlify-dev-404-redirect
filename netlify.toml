@@ -1,0 +1,10 @@
+# This redirects any requests 
+# to files that are not found under /test
+# to the live show renderer
+# Does not currently work with `netlify dev`
+# see https://github.com/netlify/cli/pull/538
+# Update: this didn't fix it?
+[[redirects]]
+  from = "/test/*"
+  to = "/test/?id=:splat"
+  status = 302
